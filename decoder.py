@@ -26,7 +26,7 @@ def decoder_glasso(y,
                    n_verbose=100,
                    tolog=False,
                    ):
-    """Main class for the decoder proposed in the paper.
+    """Decoder proposed in the paper.
     It recovers a d*d precision matrix from an empirical sketch of the empirical covariance of size M.
 
     Parameters

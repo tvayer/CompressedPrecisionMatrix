@@ -38,7 +38,7 @@ emp_cov = (1.0 / n_sample) * X.T.dot(X)
 cov_glasso, precision_glasso = graphical_lasso(
     emp_cov, alpha=reg, max_iter=300, mode='cd', verbose=False, tol=1e-12)
 # %% Sketching phase
-M = 1024  # dim for the sketching, here only 50% of d^2/2 which is the size of the emp cov matrix
+M = 1024  # dim for the sketch, here only 50% of d^2/2 which is the size of the emp cov matrix
 sketching_op = SketchingOperator(d=dim, M=M, method='structured')
 y = sketching_op.sketch_covariance(emp_cov)  # sketch covariance
 # %%
